@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+@fontFamilly: "Lobster", sans-serif;
+
+
+//cores
+@h1FormDataAtual:#00FFFF;
+@corFormDataNascimento: #48D1CC;
+@corLabels: #5F9EA0;
+@corButton:#00CED1;
+@corh2Resultado:#00FFFF;
+@corSpanResultado:#FF00FF;
+
+
+//breakpoints
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width:1023px)";
+
+
+//mixin
+.inputs{
+    margin-left: 24px;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+body{
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: @fontFamilly;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+
+   
+    .h1-data-atual{
+        font-size: 2.8em;
+        color: @h1FormDataAtual;
+    }
+
+    #form{
+        padding-top: 20px;
+
+        .form-data-atual{
+            display: flex;
+        }
+
+        input{
+            .inputs();
+            outline-color: @h1FormDataAtual;
+        }
+    
+        label{
+            margin-left: 18px;
+            display: flex;
+            justify-content: start;
+            font-size: 1.3em;
+            color: @corLabels;
+        }
+    
+        .h1-nascimento{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: @corFormDataNascimento;
+        } 
+    
+        .form-nascimento{
+            display: flex;
+            input{
+                .inputs();
+                outline-color: @corFormDataNascimento;
+            }
+
+        }  
+        
+        button{
+            margin: 50px 0;
+            padding: 8px;
+            font-weight: bold;
+            transition: all ease .2s;
+            font-size: 1.1em;
+            background-color: @corButton;
+            border: none;
+            border-radius: 5px;
+
+            &:hover{
+                transform: scale(1.1);
+                color: @corButton;
+                background-color: black;
+            } 
+        }
+
+        .resultado{
+            margin-top: 30px;
+            font-size: 2em;
+
+            h2{
+                color: @corh2Resultado;
+                span{
+                    color: @corSpanResultado;
+                }
+            }
+        }
+    }
+
+    
+}
+
+
+@media @breakpointMobile {
+    .container {
+        max-width: 80%;
+        display: block;
+        background-color: red;
+    }
+    
+    #form {
+        .form-data-atual{
+            display: block;
+
+            input{
+                margin-left: 0;
+                display: block;
+            }
+
+            label{
+                display: block;
+            }
+
+            
+        }
+    }
+    
+}
+@media @breakpointTablet {
+    .container{
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        height: 100vh;
+    }
+}

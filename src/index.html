@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../dev/styles/main.css">
+    <title>Calculador de idades</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="h1-data-atual">Insira a data atual</h1>
+        <div class="container-form">
+            <form id="form">
+                <div class="form-data-atual">
+                    <div>
+                        <label for="dia-atual">Dia</label>
+                        <input type="number" id="dia-atual"  placeholder="DD">
+                    </div>
+                    <div>
+                        <label for="mes-atual">Mês</label>
+                        <input type="number" id="mes-atual"  placeholder="MM">
+                    </div>
+                    <div>
+                        <label for="ano-atual">Ano</label>
+                        <input type="number" id="ano-atual"  placeholder="YYYY">
+                    </div>
+                </div>
+
+                <h1 class="h1-nascimento">Insira a data de nascimento</h1>
+                <div class="form-nascimento">
+                    <div>
+                        <label for="dia-nascimento">Dia</label>
+                        <input type="number" id="dia-nascimento"  placeholder="DD">
+                    </div>
+                    <div>
+                        <label for="mes-nascimento">Mês</label>
+                        <input type="number" id="mes-nascimento"  placeholder="MM">
+                    </div>
+                    <div>
+                        <label for="ano-nascimento">Ano</label>
+                        <input type="number" id="ano-nascimento"  placeholder="YYYY">
+                    </div>
+                </div>
+                <button type="submit">Calculcar Idade</button>
+                <div class="resultado">
+                    <h2><span class="anos">--</span> Anos</h2>
+                    <h2><span class="meses">--</span> Meses</h2>
+                    <h2><span class="dias">--</span> Dias</h2>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/scripts.js"></script>
+    
+</body>
+</html>
