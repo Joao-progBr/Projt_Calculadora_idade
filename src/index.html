@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="../dev/styles/main.css">
+    <link rel="stylesheet" href="@@ENDERECO_CSS">
+
     <title>Calculador de idades</title>
 </head>
 <body>
@@ -17,15 +17,15 @@
         <div class="container-form">
             <form id="form">
                 <div class="form-data-atual">
-                    <div>
+                    <div class="d-flex">
                         <label for="dia-atual">Dia</label>
                         <input type="number" id="dia-atual"  placeholder="DD">
                     </div>
-                    <div>
+                    <div class="d-flex">
                         <label for="mes-atual">Mês</label>
                         <input type="number" id="mes-atual"  placeholder="MM">
                     </div>
-                    <div>
+                    <div class="d-flex">
                         <label for="ano-atual">Ano</label>
                         <input type="number" id="ano-atual"  placeholder="YYYY">
                     </div>
@@ -33,15 +33,15 @@
 
                 <h1 class="h1-nascimento">Insira a data de nascimento</h1>
                 <div class="form-nascimento">
-                    <div>
+                    <div class="d-flex">
                         <label for="dia-nascimento">Dia</label>
                         <input type="number" id="dia-nascimento"  placeholder="DD">
                     </div>
-                    <div>
+                    <div class="d-flex">
                         <label for="mes-nascimento">Mês</label>
                         <input type="number" id="mes-nascimento"  placeholder="MM">
                     </div>
-                    <div>
+                    <div class="d-flex">
                         <label for="ano-nascimento">Ano</label>
                         <input type="number" id="ano-nascimento"  placeholder="YYYY">
                     </div>
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <script src="./scripts/scripts.js"></script>
+    <script src="@@ENDERECO_JS"></script>
     
 </body>
 </html>

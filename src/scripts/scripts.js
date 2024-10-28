@@ -1,3 +1,5 @@
+
+
 const form = document.getElementById('form')
 
 form.addEventListener('submit', function(e){
@@ -12,16 +14,17 @@ form.addEventListener('submit', function(e){
     let diaNascimento = parseInt(document.getElementById('dia-nascimento').value);
     let mesNascimento = parseInt(document.getElementById('mes-nascimento').value);
     let anoNascimento = parseInt(document.getElementById('ano-nascimento').value);
-
+    
     let calcDataAno = anoAtual - anoNascimento;
     let calcDataMes = mesAtual - mesNascimento;
-    let calcDataDia = diaAtual - diaNascimento;
+    let calcDataDia =  diaNascimento - diaAtual;
 
     if (isNaN(diaAtual) || isNaN(mesAtual) || isNaN(anoAtual) ||
     isNaN(diaNascimento) || isNaN(mesNascimento) || isNaN(anoNascimento)) {
     alert("Por favor, insira valores válidos em todos os campos.");
         return;
     }
+
 
     if(calcDataMes < 0){
         calcDataAno -=1;

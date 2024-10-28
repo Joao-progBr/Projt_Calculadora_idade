@@ -24,12 +24,12 @@
 
 
 //mixin
-.inputs{
-    margin-left: 24px;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-}
+// .inputs{
+//     margin-left: 24px;
+//     border: none;
+//     padding: 8px;
+//     border-radius: 5px;
+// }
 
 
 body{
@@ -46,106 +46,121 @@ body{
     text-align: center;
     align-items: center;
     padding-top: 50px;
-
+}
    
-    .h1-data-atual{
-        font-size: 2.8em;
-        color: @h1FormDataAtual;
-    }
-
-    #form{
-        padding-top: 20px;
-
-        .form-data-atual{
-            display: flex;
-        }
-
-        input{
-            .inputs();
-            outline-color: @h1FormDataAtual;
-        }
-    
-        label{
-            margin-left: 18px;
-            display: flex;
-            justify-content: start;
-            font-size: 1.3em;
-            color: @corLabels;
-        }
-    
-        .h1-nascimento{
-            padding-top: 20px;
-            padding-bottom: 20px;
-            color: @corFormDataNascimento;
-        } 
-    
-        .form-nascimento{
-            display: flex;
-            input{
-                .inputs();
-                outline-color: @corFormDataNascimento;
-            }
-
-        }  
-        
-        button{
-            margin: 50px 0;
-            padding: 8px;
-            font-weight: bold;
-            transition: all ease .2s;
-            font-size: 1.1em;
-            background-color: @corButton;
-            border: none;
-            border-radius: 5px;
-
-            &:hover{
-                transform: scale(1.1);
-                color: @corButton;
-                background-color: black;
-            } 
-        }
-
-        .resultado{
-            margin-top: 30px;
-            font-size: 2em;
-
-            h2{
-                color: @corh2Resultado;
-                span{
-                    color: @corSpanResultado;
-                }
-            }
-        }
-    }
-
-    
+.h1-data-atual{
+    font-size: 2.8em;
+    color: @h1FormDataAtual;
 }
 
+#form{
+    padding-top: 20px;
+
+    .form-data-atual{
+        display: flex;
+
+        input{
+            margin-left: 8px;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;;
+            outline-color: @h1FormDataAtual;
+        }
+    }
+
+    label{
+        margin-left: 8px;
+        display: flex;
+        justify-content: start;
+        font-size: 1.3em;
+        color: @corLabels;
+    }
+       
+    
+    .h1-nascimento{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: @corFormDataNascimento;
+    } 
+    
+    .form-nascimento{
+        display: flex;
+        input{
+            margin-left: 8px;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;;
+            outline-color: @corFormDataNascimento;
+        }    
+    }  
+        
+    button{
+        margin: 50px 0;
+        padding: 8px;
+        font-weight: bold;
+        transition: all ease .2s;
+        font-size: 1.1em;
+        background-color: @corButton;
+        border: none;
+        border-radius: 5px;
+
+        &:hover{
+            transform: scale(1.1);
+            color: @corButton;
+            background-color: black;
+        } 
+    }
+
+    .resultado{
+        margin-top: 30px;
+        font-size: 2em;
+
+        h2{
+            color: @corh2Resultado;
+            span{
+                color: @corSpanResultado;
+            }
+        }
+    }
+}
 
 @media @breakpointMobile {
     .container {
+        padding-top: 30px;
         max-width: 80%;
         display: block;
-        background-color: red;
     }
     
     #form {
-        .form-data-atual{
+        max-width: 350px;
+
+        .form-data-atual,
+        .form-nascimento{
             display: block;
+        }
 
-            input{
-                margin-left: 0;
-                display: block;
-            }
+        .d-flex{
+            display: flex;
+            margin-bottom: 8px;
+        }
+        input{
+            display: block;
+            width: 100%
+        }
+    
+        label{
+            display: block;
+        }
 
-            label{
-                display: block;
-            }
+        button{
+            margin: 30px 0;
+        }
 
-            
+        .resultado{
+            margin-top: 8px;
         }
     }
-    
+
 }
 @media @breakpointTablet {
     .container{
